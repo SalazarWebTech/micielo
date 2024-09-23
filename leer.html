@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Carta de San Valentín</title>
+  <link rel="stylesheet" href="leer.css">
+</head>
+<body>
+
+<div class="valentines-day">
+  <div class="envelope"></div>
+  <div class="heart"></div>
+  <div class="text">TE AMO <br>ABRELOOO <br></div>
+  <div class="front"></div>
+</div>
+
+<div id="card">
+  <div class="side one"></div>
+  <div class="side two">
+    <h2>Mi niña linda</h2>
+      <p>Holaa mi niña linda, como tas? <br>
+        Mi cielito se que el 20 no te di unas florecitas amarillas, 
+        te quiero pedir perdon por eso, realmente fue porque estaba
+        mas enfocado en lo que iba a pasar ese dia. 
+      </p>
+      <p>
+        No te di tus flores amarillas el 20 pero si he estado trabajando en 
+        alguito, te amo mucho y perdon por la demora.
+        Eres la niña de mis ojos y mereces lo mejor de lo mejor.
+      </p>
+  </div>
+</div>
+
+<!-- Contador -->
+<div id="counter" style="text-align: center; font-size: 24px; margin-top: 20px;">
+  Serás redirigido en <span id="seconds">20</span> segundos...
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src="leer.js"></script>
+<script>
+// Redirección después de 10 segundos
+let seconds = 20;
+const countdown = setInterval(() => {
+  seconds--;
+  document.getElementById('seconds').textContent = seconds;
+  if (seconds === 0) {
+    clearInterval(countdown);
+    window.location.href = "DATOS/FLORES.html"; // Cambia "#otra-seccion" a la parte de la página a la que deseas redirigir
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
